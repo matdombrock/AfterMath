@@ -22,7 +22,13 @@ Aftermath is an over-engineered calculator written in JavaScript.
 
 ## Usage
 
-Binary downloads are coming soon!
+### Windows 
+
+Just an installer from the [Releases Page](https://github.com/matdombrock/Aftermath/releases).
+
+### macOS and Linux
+
+I'm currently only building for windows, but you shouldn't have any issues building this for your OS!
 
 ---
 
