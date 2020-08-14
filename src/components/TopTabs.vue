@@ -14,19 +14,19 @@
       </div>
     </span>
 
-    <div :class="{tab:true, 'active-tab': isActive('tools')}" @click="setTab('tools')" title="Tools">
+    <div v-if="s.config.show_tools_tab" :class="{tab:true, 'active-tab': isActive('tools')}" @click="setTab('tools')" title="Tools">
       <img class="tab-icon" src="/icons/tools.svg">
     </div>
 
-    <div :class="{tab:true, 'active-tab': isActive('settings')}" @click="setTab('settings')" title="Settings">
+    <div v-if="s.config.show_settings_tab" :class="{tab:true, 'active-tab': isActive('settings')}" @click="setTab('settings')" title="Settings">
       <img class="tab-icon" src="/icons/settings.svg">
     </div>
 
-    <div :class="{tab:true, 'active-tab': isActive('theme')}" @click="setTab('theme')" title="Theme">
+    <div v-if="s.config.show_theme_tab" :class="{tab:true, 'active-tab': isActive('theme')}" @click="setTab('theme')" title="Theme">
       <img class="tab-icon" src="/icons/theme.svg">
     </div>
     
-    <div :class="{tab:true, 'active-tab': isActive('info')}" @click="setTab('info')" title="Info">
+    <div v-if="s.config.show_info_tab" :class="{tab:true, 'active-tab': isActive('info')}" @click="setTab('info')" title="Info">
       <img class="tab-icon" src="/icons/info2.svg">
     </div>
     
