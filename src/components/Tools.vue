@@ -4,6 +4,7 @@
     <div v-if="tool===''">
       <div class="tool-item" @click="setTool('what-percent')">'A' is what percent of 'B'</div>
       <div class="tool-item" @click="setTool('percent-of')">What is 'A' percent of 'B'</div>
+      <div class="tool-item" @click="setTool('list')">List (array) Tools</div>
       <br>
       More tools coming soon!
     </div>
@@ -12,56 +13,32 @@
         <img class="icon backBtn" @click="setTool('')" src="/icons/back.svg" title="back">
       </div>
 
-      <div v-if="tool==='percent-of'">
-        <h2>Percent Of</h2>
+      <WhatPercent :tool="tool"/>
+      <PercentOf :tool="tool"/>
+      <List :tool="tool"/>
       
-        <b>What is {{ts.a || 'A'}}% of {{ts.b || 'B'}}?</b>
-        <hr>
-        <input type="text" v-model="ts.a" placeholder="A (percent)"><br>
-        percent of
-        <input type="text" v-model="ts.b" placeholder="B (whole)"><br>
-        <hr>
-        Formula: ( percent / 100 ) * whole
-        <br>
-        Equation: ( {{ts.a || 'A'}} / 100 ) * {{ts.b || 'B'}}
-        <hr>
-        {{ts.a || 'A'}}% of {{ts.b || 'B'}} is <b>{{(ts.a/100)*ts.b}}</b>
-        <div class="output" title="Result">{{(ts.a/100)*ts.b}}</div>
-      </div>
-
-      <div v-if="tool==='what-percent'">
-        <h2>What Percent</h2>
-        <b>{{ts.a || 'A'}} is what percent of {{ts.b || 'B'}}?</b>
-        <hr> 
-        <input type="text" v-model="ts.a" placeholder="A (part)"><br>
-        is what percent of
-        <input type="text" v-model="ts.b" placeholder="b (whole)"><br>
-        <hr>
-        Formula: ( part / whole ) * 100
-        <br>
-        Equation: ( {{ts.a || 'A'}} / {{ts.b || 'B'}} ) * 100
-        <hr>
-        {{ts.a || 'A'}} is <b>{{(ts.a/ts.b)*100}}%</b> of {{ts.b || 'B'}}
-        <div class="output" title="Result">{{(ts.a/ts.b)*100}}%</div>
-      </div>
 
     </div>
   </div>
 </template>
 
 <script>
+import PercentOf from './tools/PercentOf';
+import WhatPercent from './tools/WhatPercent';
+import List from './tools/List';
 export default {
   name: 'Tools',
+  components: {
+    PercentOf,
+    WhatPercent,
+    List
+  },
   props: {
     s: Object
   },
   data:()=>{
     return{
       tool:'',
-      ts:{
-        a:'1',
-        b:'3'
-      }
     }
   },
   methods:{
