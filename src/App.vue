@@ -48,7 +48,11 @@ import Settings from './components/Settings.vue';
 import Tools from './components/Tools.vue';
 //import Tab from './components/Tab.vue';
 import {evaluate, simplify, parse} from 'mathjs';
+// Theme
 
+import './themes/base.css';
+//import './themes/dark.css';
+//import './themes/light.css';
 
 export default {
   name: 'App',
@@ -86,6 +90,10 @@ export default {
           show_advanced_history: true,
           show_tab2:true,
           show_tab3:true,
+          show_tools_tab:true,
+          show_settings_tab:true,
+          show_theme_tab:true,
+          show_info_tab:true,
           auto_calculate:true,
           update_equation: true,
           persist_data: false,
@@ -93,6 +101,12 @@ export default {
           enable_simplification: false,
           enable_profanity: false,
           load_example_equations: true,
+        },
+        theme:{
+          default_width:'600',//px
+          default_height:'600',//px
+          base_font_size:'12',//px
+
         }
       }
     }
@@ -128,6 +142,7 @@ export default {
     }
   },
   mounted(){
+
     const app = this;
     document.addEventListener('keydown', function(event) {
       //const key = event.key; // "a", "1", "Shift", etc.
@@ -187,93 +202,4 @@ export default {
   font-family: "LiberationMono";
   src: url("/fonts/LiberationMono-Regular.ttf");
 }
-:root{
-  --bg: rgb(48, 48, 48);
-  --dark: rgb(20, 20, 20);
-  --text: rgba(224, 224, 224, 1);
-  --textHighlight: rgb(233, 233, 233);
-  --darkish: rgb(32, 32, 32);
-  --accent: rgb(46, 46, 46);
-  --accent2: rgb(66, 66, 66);
-  --accent3: rgb(94, 94, 94);
-
-  --mono-font: LiberationMono;
-  --regular-font: fallingSky;
-}
-#app {
-  font-family: fallingSky;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-
-}
-body{
-  background:var(--bg);
-  color:var(--text);
-  margin:0 auto;
-  overflow-y:scroll;
-  xtext-transform: uppercase;
-}
-a{
-  color:var(--text)
-}
-input[type=text], textarea{
-  width:90%;
-  padding:0.75rem;
-  background:var(--dark);
-  color:var(--text);
-  font-size:2rem;
-  border:none;
-  font-family: var(--mono-font)
-}
-hr{
-  border-color: var(--accent3);
-}
-.app-area{
-  background:var(--bg);
-}
-.output{
-  font-size:2rem;
-  padding:1rem;
-  color:var(--textHighlight);
-  font-weight: bold;
-  cursor: copy;
-  font-family: var(--mono-font)
-}
-.output .icon{
-  cursor: pointer;
-}
-.output .icon:hover{
-  filter: invert(100%);
-}
-.textBtn{
-  display:inline;
-  cursor:pointer;
-}
-.icon{
-  max-width:16px;
-  filter: invert(85%);
-  user-select: none;
-}
-/* SCROLLBAR 8?
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 </style>
