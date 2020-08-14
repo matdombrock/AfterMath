@@ -148,8 +148,8 @@ export default {
       //const key = event.key; // "a", "1", "Shift", etc.
       document.getElementById("input").focus();
       console.log(event.key);
-      if (event.key === "Delete") {
-          app.s.input = '';
+      if (event.key === "Delete" || event.key === "Escape") {
+          app.s.tabs[app.s.tab].input = '';
       }
       if (event.key === "Enter") {
           // Open Menu...
