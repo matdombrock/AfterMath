@@ -22,6 +22,18 @@
       <div class="item" v-if="!s.config.show_tab2" title="Show a third calculator tab">
         <input type="checkbox" disabled> Show 3rd Tab 
       </div>
+      <div class="item" title="Show tools tab">
+        <input v-model="s.config.show_tools_tab" type="checkbox"> Show Tools Tab 
+      </div>
+      <div class="item" title="Show Settings tab">
+        <input v-model="s.config.show_settings_tab" type="checkbox" disabled> Show Settings Tab 
+      </div>
+      <div class="item" title="Show theme tab">
+        <input v-model="s.config.show_theme_tab" type="checkbox"> Show Theme Tab 
+      </div>
+      <div class="item" title="Show info tab">
+        <input v-model="s.config.show_info_tab" type="checkbox"> Show Info Tab 
+      </div>
       <div class="item" title="Automatically calculate the current equation">
         <input v-model="s.config.auto_calculate" type="checkbox" disabled> Auto Calculate 
       </div>
