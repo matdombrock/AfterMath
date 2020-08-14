@@ -1,0 +1,13 @@
+:root{
+  --bg: rgb(184, 184, 184);
+  --dark: rgb(20, 20, 20);
+  --text: rgba(224, 224, 224, 1);
+  --textHighlight: rgb(233, 233, 233);
+  --darkish: rgb(32, 32, 32);
+  --accent: rgb(46, 46, 46);
+  --accent2: rgb(66, 66, 66);
+  --accent3: rgb(94, 94, 94);
+
+  --mono-font: LiberationMono;
+  --regular-font: fallingSky;
+}

@@ -1,0 +1,101 @@
+:root{
+  --bg: rgb(45, 45, 45);
+  --text: rgb(225, 225, 225);
+  --textHighlight: rgb(233, 233, 233);
+  --dark: rgb(20, 20, 20);
+  --darkish: rgb(32, 32, 32);
+  --accent: rgb(55, 55, 55);
+  --accent2: rgb(75, 75, 75);
+  --accent3: rgb(95, 95, 95);
+
+  --mono-font: LiberationMono;
+  --regular-font: fallingSky;
+  --base-font-size: 14px;
+
+  --icon-filter: invert(85%);
+}
+html{
+  font-size: var(--base-font-size);
+}
+#app {
+  font-family: var(--regular-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+  overflow-y:scroll;
+}
+a{
+  color:var(--text)
+}
+input[type=text], textarea{
+  width:90%;
+  padding:0.75rem;
+  background:var(--dark);
+  color:var(--text);
+  font-size:2rem;
+  border:none;
+  font-family: var(--mono-font);
+}
+select{
+  width:85%;
+  padding:0.75rem;
+  background:var(--dark);
+  color:var(--text);
+  font-size:1.5rem;
+  border:none;
+  font-family: var(--mono-font);
+}
+hr{
+  border-color: var(--accent3);
+}
+.app-area{
+  background:var(--bg);
+}
+.output{
+  font-size:2rem;
+  padding:1rem;
+  color:var(--textHighlight);
+  font-weight: bold;
+  cursor: copy;
+  font-family: var(--mono-font)
+}
+.output .icon{
+  cursor: pointer;
+}
+.output .icon:hover{
+  filter: invert(100%);
+}
+.textBtn{
+  display:inline;
+  cursor:pointer;
+}
+.icon{
+  max-width:16px;
+  filter: var(--icon-filter);
+  user-select: none;
+}
+/* SCROLLBAR 8?
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
