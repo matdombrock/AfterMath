@@ -4,7 +4,7 @@ Aftermath is an over-engineered calculator written in JavaScript.
 
 *If you're wondering why anyone would want a 100mb+ calculator app running on Electron, then this project is not for you.*
 
-![screenshot]('screenshot.png')
+![ ]("screenshot.png")
 
 ---
 
