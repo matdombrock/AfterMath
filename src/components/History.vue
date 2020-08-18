@@ -69,7 +69,7 @@ export default {
 }
 .history-item{
   padding:0.5em;
-  background:var(--accent);
+  background:var(--accent3);
   width:90%;
   margin:0 auto;
   font-family: var(--mono-font)
@@ -78,7 +78,7 @@ export default {
   background:var(--accent2);
 }
 .history-item:hover{
-  background:var(--accent3);
+  background:var(--accent1);
 }
 .history-item .icon{
   padding-left:0.1rem;
