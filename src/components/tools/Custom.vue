@@ -19,7 +19,7 @@
       <hr>
     </div>
 
-    <pre v-if="true" style="text-align:left">
+    <pre v-if="false" style="text-align:left">
       <hr>
       <strong>Custom Tool Data:</strong><br>
 {{toolJSON}}
