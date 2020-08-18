@@ -1,0 +1,20 @@
+{
+  "what-percent":{
+    "name": "What Percent",
+    "description": "{{part}} is what percent of {{whole}}",
+    "output": "{{output}}%",
+    "variables": {
+      "part": {
+        "type": "Number",
+        "default": 1,
+        "description": "The amount we want to compare to the whole."
+      },
+      "whole": {
+        "type": "Number",
+        "default": 2,
+        "description": "The entire amount."
+      }
+    },
+    "formula": "(part / whole) * 100"
+  }
+}

@@ -5,6 +5,7 @@
       <div class="tool-item" @click="setTool('what-percent')">'A' is what percent of 'B'</div>
       <div class="tool-item" @click="setTool('percent-of')">What is 'A' percent of 'B'</div>
       <div class="tool-item" @click="setTool('list')">List (array) Tools</div>
+      <div class="tool-item" @click="setTool('custom')">TEST</div>
       <br>
       More tools coming soon!
     </div>
@@ -16,6 +17,7 @@
       <WhatPercent :tool="tool"/>
       <PercentOf :tool="tool"/>
       <List :tool="tool"/>
+      <Custom :tool="tool"/>
       
 
     </div>
@@ -26,11 +28,13 @@
 import PercentOf from './tools/PercentOf';
 import WhatPercent from './tools/WhatPercent';
 import List from './tools/List';
+import Custom from './tools/Custom';
 export default {
   name: 'Tools',
   components: {
     PercentOf,
     WhatPercent,
+    Custom,
     List
   },
   props: {
