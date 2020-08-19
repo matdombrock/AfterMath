@@ -22,12 +22,15 @@ html{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  margin-left:10px;
+  min-height:100vh;
+  background:var(--bg);
 }
 body{
-  background:var(--bg);
   color:var(--text);
   margin:0 auto;
   overflow-y:scroll;
+  background:var(--dark);
 }
 a{
   color:var(--text)
@@ -87,7 +90,7 @@ hr{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: var(--dark);
 }
 
 /* Handle */
