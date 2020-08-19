@@ -34,7 +34,7 @@
 
       <Settings :s="s" />
 
-      <div style="margin-top:48px"></div>
+      <div style="margin-top:28px"></div>
       <TopTabs :s="s"/>
     </div><!--app area-->
   </div>
@@ -101,11 +101,15 @@ export default {
           enable_simplification: false,
           enable_profanity: false,
           load_example_equations: true,
+          show_tool_equations:false,
         },
         theme:{
           default_width:'600',//px
           default_height:'600',//px
           base_font_size:'12',//px
+
+        },
+        tools:{
 
         }
       }
@@ -139,10 +143,16 @@ export default {
       }
       return 'FUCK';
       //return NaN;
+    },
+    isElectron: function(){
+      const userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.indexOf(' electron/') > -1) {
+        return true;
+      }
+      return false;
     }
   },
   mounted(){
-
     const app = this;
     document.addEventListener('keydown', function(event) {
       //const key = event.key; // "a", "1", "Shift", etc.
@@ -164,7 +174,11 @@ export default {
       //console.log('mouse');
       //document.getElementById("input").focus();
     });
-    
+    if(this.isElectron){
+      // move this to tools
+      const { ipcRenderer } = window.require('electron');
+      console.log(ipcRenderer.sendSync('get-tools'));
+    }
   },
   methods:{
     copy(str){

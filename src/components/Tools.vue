@@ -2,10 +2,12 @@
   <div class="tools" v-if="s.tab === 'tools'">
     <h1 v-if="tool===''">Tools</h1>
     <div v-if="tool===''">
-      <div class="tool-item" @click="setTool('what-percent')">'A' is what percent of 'B'</div>
-      <div class="tool-item" @click="setTool('percent-of')">What is 'A' percent of 'B'</div>
-      <div class="tool-item" @click="setTool('list')">List (array) Tools</div>
-      <div class="tool-item" @click="setTool('custom')">TEST</div>
+      <div v-for="(tool,key) in tools" :key="tool.name" @click="setTool(key)" class="tool-item">
+        {{tool.name}}
+      </div>
+      <!-- <div class="tool-item" @click="setTool('what-percent')">'A' is what percent of 'B'</div>
+      <div class="tool-item" @click="setTool('percent-of')">What is 'A' percent of 'B'</div> -->
+      <div class="tool-item" @click="setCustomTool('list')">List (array) Tools</div>
       <br>
       More tools coming soon!
     </div>
@@ -14,10 +16,9 @@
         <img class="icon backBtn" @click="setTool('')" src="/icons/back.svg" title="back">
       </div>
 
-      <WhatPercent :tool="tool"/>
-      <PercentOf :tool="tool"/>
-      <List :tool="tool"/>
-      <Custom :tool="tool"/>
+      <List :tool="tool" :s="s"/>
+
+      <Template v-if="customTool===false" :tool="tool" :tools="tools" :s="s"/>
       
 
     </div>
@@ -25,16 +26,15 @@
 </template>
 
 <script>
-import PercentOf from './tools/PercentOf';
-import WhatPercent from './tools/WhatPercent';
 import List from './tools/List';
-import Custom from './tools/Custom';
+import Template from './tools/Template';
+
+import tools from '../data/tools.json';
+
 export default {
   name: 'Tools',
   components: {
-    PercentOf,
-    WhatPercent,
-    Custom,
+    Template,
     List
   },
   props: {
@@ -43,11 +43,18 @@ export default {
   data:()=>{
     return{
       tool:'',
+      customTool: false,
+      tools: tools
     }
   },
   methods:{
     setTool(tool){
       this.tool = tool;
+      this.customTool = false;
+    },
+    setCustomTool(tool){
+      this.tool = tool;
+      this.customTool = true;
     }
   }
 }

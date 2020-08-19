@@ -55,6 +55,9 @@
       <div class="item" title="Load example equations on startup">
         <input v-model="s.config.load_example_equations" type="checkbox" disabled> Load Example Equations 
       </div>
+      <div class="item" title="Show full equations with tool results">
+        <input v-model="s.config.show_tool_equations" type="checkbox"> Show Tool Equations
+      </div>
     </div>
 </template>
 
