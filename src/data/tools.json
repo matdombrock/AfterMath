@@ -1,0 +1,49 @@
+{
+  "what-percent":{
+    "name": "What Percent",
+    "description": "{{part}} is what percent of {{whole}}?",
+    "output": "{{output}}%",
+    "variables": {
+      "part": {
+        "default": 1,
+        "description": "The amount we want to compare to the whole."
+      },
+      "whole": {
+        "default": 2,
+        "description": "The entire amount."
+      }
+    },
+    "formula": "(part / whole) * 100"
+  },
+  "percent-of":{
+    "name": "Percent Of",
+    "description": "What is {{part}}% of {{whole}}?",
+    "output": "{{output}}",
+    "variables": {
+      "part": {
+        "default": 50,
+        "description": "The percentage we want to know of the whole."
+      },
+      "whole": {
+        "default": 100,
+        "description": "The entire amount."
+      }
+    },
+    "formula": "(part / 100) * whole"
+  },
+  "pythagorean-theorem-c":{
+    "name": "Pythagorean Theorem C",
+    "description": "What is the hypotenuse length of a right triangle with known side lengths {{a}} & {{b}}?",
+    "variables": {
+      "a": {
+        "default": 50,
+        "description": "Known side one."
+      },
+      "b": {
+        "default": 100,
+        "description": "Known side two."
+      }
+    },
+    "formula": "sqrt(a^2 + b^2)"
+  }
+}
