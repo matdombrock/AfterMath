@@ -1,6 +1,6 @@
-# Aftermath
+# AfterMath
 
-Aftermath is an over-engineered calculator written in JavaScript.
+AfterMath is an over-engineered calculator written in JavaScript.
 
 *If you're wondering why anyone would want a 100mb+ calculator app running on Electron, then this project is not for you.*
 
@@ -24,7 +24,7 @@ Aftermath is an over-engineered calculator written in JavaScript.
 
 ### Windows 
 
-Just an installer from the [Releases Page](https://github.com/matdombrock/Aftermath/releases).
+Just an installer from the [Releases Page](https://github.com/matdombrock/AfterMath/releases).
 
 ### macOS and Linux
 
