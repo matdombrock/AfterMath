@@ -1,7 +1,7 @@
 <template>
   <div v-if="tool!==''">
     <h2>{{ls.toolData.name}}</h2>
-    <b>{{description}}?</b>
+    <b>{{description}}</b>
     <hr>
     <div v-for="item in Object.keys(ls.toolData.variables)" :key="item">
       {{item.toUpperCase()}}
@@ -43,22 +43,22 @@ export default {
     return{
       ls:{
         toolData:{
-          "name": "What Percent",
-          "description": "{{part}} is what percent of {{whole}}",
-          "output": "{{output}}%",
+          "name": "TOOL ERROR",
+          "description": "This tool could not be loaded",
+          "output": "{{output}}",
           "variables": {
-            "part": {
+            "nan1": {
               "type": "Number",
               "default": 1,
               "description": "The amount we want to compare to the whole."
             },
-            "whole": {
+            "nan2": {
               "type": "Number",
               "default": 2,
               "description": "The entire amount."
             }
           },
-          "formula": "(part / whole) * 100"
+          "formula": "NaN"
         },
         vars:{}
       }
@@ -112,14 +112,14 @@ export default {
     buildFormula(){
       let formula = this.ls.toolData.formula;
       for(let item of Object.keys(this.ls.vars)){
-        formula = formula.replace(item,this.ls.vars[item] || 0);
+        formula = formula.split(item).join(this.ls.vars[item] || 0);
       }
       return formula;
     },
     buildDescription(){
       let result = this.ls.toolData.description;
       for(let item of Object.keys(this.ls.toolData.variables)){
-        result = result.replace(`{{${item}}}`, this.ls.vars[item] || item.toUpperCase());
+        result = result.split(`{{${item}}}`).join(this.ls.vars[item] || item.toUpperCase());
       }
       return result;
     },
