@@ -1,0 +1,19 @@
+{
+  "show_number_pad": false,
+  "show_history": true,
+  "show_advanced_history": true,
+  "show_tab2":true,
+  "show_tab3":true,
+  "show_tools_tab":true,
+  "show_settings_tab":true,
+  "show_theme_tab":true,
+  "show_info_tab":true,
+  "auto_calculate":true,
+  "update_equation": true,
+  "persist_data": false,
+  "enable_string_output":false,
+  "enable_simplification": false,
+  "enable_profanity": false,
+  "load_example_equations": true,
+  "show_tool_equations":false
+}

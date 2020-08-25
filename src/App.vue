@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import defaultConfig from './data/default-config.json';
+
 import TopTabs from './components/TopTabs.vue';
 import Numpad from './components/Numpad';// adding .vue causes error?
 import History from './components/History.vue';
@@ -84,25 +86,7 @@ export default {
         input: 'sin(45 deg) ^ sqrt(2 + 5!) + pi',
         history: [],
         tab: '1',
-        config:{
-          show_number_pad: false,
-          show_history: true,
-          show_advanced_history: true,
-          show_tab2:true,
-          show_tab3:true,
-          show_tools_tab:true,
-          show_settings_tab:true,
-          show_theme_tab:true,
-          show_info_tab:true,
-          auto_calculate:true,
-          update_equation: true,
-          persist_data: false,
-          enable_string_output:false,
-          enable_simplification: false,
-          enable_profanity: false,
-          load_example_equations: true,
-          show_tool_equations:false,
-        },
+        config:defaultConfig,
         theme:{
           default_width:'600',//px
           default_height:'600',//px
