@@ -1,5 +1,5 @@
 {
-  "name": "Aftermath",
+  "name": "aftermath",
   "version": "0.1.4",
   "private": true,
   "scripts": {
@@ -41,7 +41,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-debugger": 1
+    }
   },
   "browserslist": [
     "> 1%",
