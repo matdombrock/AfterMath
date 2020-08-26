@@ -49,5 +49,9 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "win": {
+    "target": "NSIS",
+    "icon": "build/icon.ico"
+  }
 }
