@@ -41,7 +41,8 @@
 </template>
 
 <script>
-import defaultConfig from './data/default-config.json';
+const { ipcRenderer } = window.require('electron');
+import configManager from './tools/configManager';
 
 import TopTabs from './components/TopTabs.vue';
 import Numpad from './components/Numpad';// adding .vue causes error?
@@ -86,7 +87,7 @@ export default {
         input: 'sin(45 deg) ^ sqrt(2 + 5!) + pi',
         history: [],
         tab: '1',
-        config:defaultConfig,
+        config: configManager.configValues,
         theme:{
           default_width:'600',//px
           default_height:'600',//px
@@ -138,6 +139,8 @@ export default {
   },
   mounted(){
     const app = this;
+    this.loadState();
+    setInterval(this.saveState, 1000);
     document.addEventListener('keydown', function(event) {
       //const key = event.key; // "a", "1", "Shift", etc.
       document.getElementById("input").focus();
@@ -178,6 +181,34 @@ export default {
       el.select();
       document.execCommand('copy');
       document.body.removeChild(el);
+    },
+    saveState(){
+      debugger;
+      const json = JSON.stringify(this.s,null,2);
+      if(!this.isElectron){
+        localStorage.setItem('state',json);
+        console.log('State Saved');
+        return;
+      }
+      ipcRenderer.send('save-state', json);
+      console.log('State Saved');
+    },
+    loadState(){
+      if(!this.isElectron){
+        let loaded = localStorage.getItem('state');
+        console.log(loaded);
+        if(loaded){
+          loaded = JSON.parse(loaded);
+          this.$set(this.s, loaded);
+        }else{
+          console.log('COULD NOT LOAD STATE');
+        }
+        return;
+      }
+      const loaded = ipcRenderer.sendSync('load-state');
+      console.log(loaded);
+      this.$set(this, 's', loaded);
+      console.log('LOADED STATE');
     }
   }
 }
@@ -198,6 +229,6 @@ export default {
 }
 @font-face {
   font-family: "LiberationMono";
-  src: url("/fonts/LiberationMono-Regular.ttf");
+  src: url("/fonts/LiberationMono.ttf");
 }
 </style>

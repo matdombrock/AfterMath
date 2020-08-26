@@ -88,6 +88,28 @@ ipcMain.on('get-tools', (event) => {
   event.returnValue = undefined;
 })
 
+ipcMain.on('save-state', (event, json) => {
+  const fs = require('fs');
+  const home = app.getPath('home');
+  fs.writeFileSync(home+'/.aftermath/state.json', json);
+  event.returnValue = undefined;
+});
+
+ipcMain.on('load-state', (event) => {
+  const fs = require('fs');
+  const home = app.getPath('home');
+  if(fs.existsSync(home+'/.aftermath/state.json') === false){
+    console.log('COULD NOT LOAD STATE');
+    event.returnValue = undefined;
+    return;
+  }
+  let loaded = fs.readFileSync(home+'/.aftermath/state.json');
+  
+  loaded = JSON.parse(loaded);
+  event.returnValue = loaded;
+  
+});
+
 // Exit cleanly on request from parent process in development mode.
 if (isDevelopment) {
   if (process.platform === 'win32') {
