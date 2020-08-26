@@ -183,7 +183,6 @@ export default {
       document.body.removeChild(el);
     },
     saveState(){
-      debugger;
       const json = JSON.stringify(this.s,null,2);
       if(!this.isElectron){
         localStorage.setItem('state',json);
