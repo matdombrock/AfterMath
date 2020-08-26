@@ -1,19 +1,95 @@
 {
-  "show_number_pad": false,
-  "show_history": true,
-  "show_advanced_history": true,
-  "show_tab2":true,
-  "show_tab3":true,
-  "show_tools_tab":true,
-  "show_settings_tab":true,
-  "show_theme_tab":true,
-  "show_info_tab":true,
-  "auto_calculate":true,
-  "update_equation": true,
-  "persist_data": false,
-  "enable_string_output":false,
-  "enable_simplification": false,
-  "enable_profanity": false,
-  "load_example_equations": true,
-  "show_tool_equations":false
+  "show_number_pad":{
+    "value": false,
+    "description": "Display a num pad for mouse/touch input",
+    "name": "Show Number Pad"
+  },
+  "show_history":{
+    "value": true,
+    "description": "Show calculation history list",
+    "name": "Show History"
+  },
+  "show_advanced_history":{
+    "value": true,
+    "description": "Show advanced history tools",
+    "name": "Show Advanced History",
+    "if": "show_history"
+  },
+  "show_tab2":{
+    "value": true,
+    "description": "Show a second calculator tab",
+    "name": "Show 2nd Tab"
+  },
+  "show_tab3":{
+    "value": true,
+    "description": "Show a third calculator tab",
+    "name": "Show 3rd Tab",
+    "if": "show_tab2"
+  },
+  "show_tools_tab":{
+    "value": true,
+    "description": "Show the tools tab",
+    "name": "Show Tools Tab"
+  },
+  "show_settings_tab":{
+    "value": true,
+    "description": "Show Settings tab",
+    "name": "Show Settings Tab",
+    "disabled":true
+  },
+  "show_theme_tab":{
+    "value": true,
+    "description": "Show Theme tab",
+    "name": "Show Theme Tab"
+  },
+  "show_info_tab":{
+    "value": true,
+    "description": "Show Info tab",
+    "name": "Show Info Tab"
+  },
+  "auto_calculate":{
+    "value": true,
+    "description": "Automatically calculate the current equation",
+    "name": "Auto Calculate",
+    "disabled":true
+  },
+  "update_equation":{
+    "value": true,
+    "description": "Update the equation input box with the last calculation when you press enter.",
+    "name": "Update Equation",
+    "disabled":true
+  },
+  "persist_data":{
+    "value": true,
+    "description": "Save settings and history between sessions.",
+    "name": "Persists Data",
+    "disabled":true
+  },
+  "enable_string_output":{
+    "value": true,
+    "description": "Enable advanced string output. Unit conversions ect.",
+    "name": "Enable String Output (Experimental)"
+  },
+  "enable_simplification":{
+    "value": true,
+    "description": "Simplify equations if a result can't be found.",
+    "name": "Enable Simplification (Experimental))"
+  },
+  "enable_profanity":{
+    "value": true,
+    "description": "Can we say bad words when we're mad?",
+    "name": "Enable Profanity",
+    "disabled":true
+  },
+  "load_example_equations":{
+    "value": true,
+    "description": "Load example equations on startup",
+    "name": "Load Example Equations",
+    "disabled":true
+  },
+  "show_tool_equations":{
+    "value": true,
+    "description": "Show full equations with tool results",
+    "name": "Show Tool Equations"
+  }
 }
