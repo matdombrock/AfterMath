@@ -91,6 +91,9 @@ ipcMain.on('get-tools', (event) => {
 ipcMain.on('save-state', (event, json) => {
   const fs = require('fs');
   const home = app.getPath('home');
+  if(fs.existsSync(home+'/.aftermath') === false){
+    fs.mkdirSync(home+'/.aftermath');
+  }
   fs.writeFileSync(home+'/.aftermath/state.json', json);
   event.returnValue = undefined;
 });
