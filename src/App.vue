@@ -140,7 +140,7 @@ export default {
   mounted(){
     const app = this;
     this.loadState();
-    setInterval(this.saveState, 1000);
+    this.saveState();
     document.addEventListener('keydown', function(event) {
       //const key = event.key; // "a", "1", "Shift", etc.
       document.getElementById("input").focus();
@@ -183,14 +183,18 @@ export default {
       document.body.removeChild(el);
     },
     saveState(){
-      const json = JSON.stringify(this.s,null,2);
-      if(!this.isElectron){
-        localStorage.setItem('state',json);
+      console.log();
+      setInterval(function(app){
+        const json = JSON.stringify(app.s,null,2);
+        if(!app.isElectron){
+          localStorage.setItem('state',json);
+          console.log('State Saved');
+          return;
+        }
+        ipcRenderer.send('save-state', json);
         console.log('State Saved');
-        return;
-      }
-      ipcRenderer.send('save-state', json);
-      console.log('State Saved');
+      },500, this);
+      
     },
     loadState(){
       if(!this.isElectron){
@@ -205,6 +209,10 @@ export default {
         return;
       }
       const loaded = ipcRenderer.sendSync('load-state');
+      if(!loaded){
+        console.log('COULD NOT LOAD STATE');
+        return;
+      }
       console.log(loaded);
       this.$set(this, 's', loaded);
       console.log('LOADED STATE');
