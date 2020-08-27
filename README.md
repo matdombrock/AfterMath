@@ -4,6 +4,10 @@ AfterMath is an over-engineered calculator written in JavaScript.
 
 *If you're wondering why anyone would want a 100mb+ calculator app running on Electron, then this project is not for you.*
 
+While this app is still in relatively early development, it's entirely useable in it's current state.
+
+# [-DOWNLOAD WINDOWS INSTALLERS-](https://github.com/matdombrock/AfterMath/releases)
+
 ![](screenshot.png)
 
 ---
@@ -24,7 +28,7 @@ AfterMath is an over-engineered calculator written in JavaScript.
 
 ### Windows 
 
-Just an installer from the [Releases Page](https://github.com/matdombrock/AfterMath/releases).
+Just grab an installer from the [Releases Page](https://github.com/matdombrock/AfterMath/releases).
 
 ### macOS and Linux
 
