@@ -198,7 +198,7 @@ export default {
           return;
         }
         ipcRenderer.send('save-state', json);
-        console.log('State Saved');
+        //console.log('State Saved');
       },500, this);
       
     },
