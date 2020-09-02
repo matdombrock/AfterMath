@@ -86,8 +86,6 @@ export default {
             history: [],
           },
         },
-        input: 'sin(45 deg) ^ sqrt(2 + 5!) + pi',
-        history: [],
         tab: '1',
         config: configManager.configValues,
         theme:'dark',
@@ -103,23 +101,19 @@ export default {
       if(joined!==''){
         try{
           const result = evaluate(joined);
-          //this.history.push(result);
           if(!Number.isNaN(Number(result)) || this.s.config.enable_string_output){
             return result;
           }
         }catch(err){
-          //console.log(err);
           console.log(joined);
         }
         try{
           joined = parse(joined);
           const result = simplify(joined).toString();
-          //this.history.push(result);
           if(!Number.isNaN(Number(result)) || this.s.config.enable_simplification ||this.s.config.enable_string_output){
             return result;
           }
         }catch(err){
-          //console.log(err);
           console.log(joined);
         }
       }
@@ -140,7 +134,6 @@ export default {
     this.applyTheme();
     this.saveState();
     document.addEventListener('keydown', function(event) {
-      //const key = event.key; // "a", "1", "Shift", etc.
       document.getElementById("input").focus();
       console.log(event.key);
       if (event.key === "Delete" || event.key === "Escape") {
@@ -198,7 +191,6 @@ export default {
           return;
         }
         ipcRenderer.send('save-state', json);
-        //console.log('State Saved');
       },500, this);
       
     },
