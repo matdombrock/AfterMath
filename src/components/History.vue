@@ -69,13 +69,13 @@ export default {
 }
 .history-item{
   padding:0.5em;
-  background:var(--accent3);
+  background:var(--accentE);
   width:90%;
   margin:0 auto;
   font-family: var(--mono-font)
 }
 .history-item:nth-child(odd){
-  background:var(--accent2);
+  background:var(--accentD);
 }
 .history-item:hover{
   background:var(--accent1);

@@ -53,6 +53,6 @@ h1{
 }
 .settings .item{
   padding:0.5em;
-  border-top:1px solid var(--accent3);
+  border-top:1px solid var(--accentE);
 }
 </style>

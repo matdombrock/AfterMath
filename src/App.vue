@@ -15,6 +15,7 @@
       </div>   
 
       <Tools :s="s" />
+      <Theme :s="s" :applyTheme="applyTheme" />
 
       <div v-if="s.tab === 'info'">
         <h1>AFTERMATH</h1>
@@ -25,11 +26,6 @@
         Made by <a href="https://matdombrock.com" target="_blank">Mathieu Dombrock</a>
         <br>
         Powered by <a href="https://mathjs.org/" target="_blank">MathJS</a>
-      </div>
-
-      <div v-if="s.tab === 'theme'">
-        <h1>Theme</h1>
-        Theme options coming soon!
       </div>
 
       <Settings :s="s" />
@@ -49,13 +45,14 @@ import Numpad from './components/Numpad';// adding .vue causes error?
 import History from './components/History.vue';
 import Settings from './components/Settings.vue';
 import Tools from './components/Tools.vue';
+import Theme from './components/Theme.vue';
 //import Tab from './components/Tab.vue';
 import {evaluate, simplify, parse} from 'mathjs';
 // Theme
 
 import './themes/base.css';
-//import './themes/dark.css';
-//import './themes/light.css';
+import themeDark from './themes/dark.json';
+import themeLight from './themes/light.json';
 
 export default {
   name: 'App',
@@ -64,11 +61,16 @@ export default {
     TopTabs,
     History,
     Tools,
+    Theme,
     //Tab,
     Settings
   },
   data:()=>{
     return{
+      themes:{
+        dark: themeDark,
+        light: themeLight
+      },
       s:{
         tabs:{
           '1':{
@@ -88,12 +90,7 @@ export default {
         history: [],
         tab: '1',
         config: configManager.configValues,
-        theme:{
-          default_width:'600',//px
-          default_height:'600',//px
-          base_font_size:'12',//px
-
-        },
+        theme:'dark',
         tools:{
 
         }
@@ -140,6 +137,7 @@ export default {
   mounted(){
     const app = this;
     this.loadState();
+    this.applyTheme();
     this.saveState();
     document.addEventListener('keydown', function(event) {
       //const key = event.key; // "a", "1", "Shift", etc.
@@ -168,6 +166,14 @@ export default {
     }
   },
   methods:{
+    applyTheme(){
+      for(let [item, data] of Object.entries(this.themes[this.s.theme])){
+          setP(item,data);
+      }
+      function setP(key,val){
+        document.documentElement.style.setProperty(key,val);
+      }
+    },
     copy(str){
       if(!str){
         str =  this.output;

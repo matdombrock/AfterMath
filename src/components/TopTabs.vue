@@ -58,7 +58,7 @@ export default {
 <style scoped>
 .top-tabs{
   text-align:left;
-  background:var(--dark);
+  background:var(--accentA);
   position:fixed;
   bottom:0;
   width:100%;
@@ -71,7 +71,7 @@ export default {
   cursor: pointer;
   line-height:0em;
   background: var(--bg);
-  background: linear-gradient(90deg, var(--dark) 0%, var(--darkish) 15%, var(--darkish) 100%);
+  background: linear-gradient(90deg, var(--accentA) 0%, var(--accentB) 15%, var(--accentB) 100%);
   border:0px solid;
   border-bottom-right-radius: 10px;
   width:32px;
@@ -90,6 +90,6 @@ export default {
 }
 .tab-icon{
   width:16px;
-  filter: invert(100%);
+  filter: var(--icon-filter);
 }
 </style>

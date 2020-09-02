@@ -1,0 +1,16 @@
+{
+  "--bg": "rgba(45,45,45,1)",
+  "--text": "rgb(225, 225, 225)",
+  "--textHighlight": "rgb(233, 233, 233)",
+  "--accentA": "rgb(20, 20, 20)",
+  "--accentB": "rgb(32, 32, 32)",
+  "--accentC": "rgb(55, 55, 55)",
+  "--accentD": "rgb(75, 75, 75)",
+  "--accentE": "rgb(95, 95, 95)",
+
+  "--mono-font": "LiberationMono",
+  "--regular-font": "fallingSky",
+  "--base-font-size": "14px",
+
+  "--icon-filter": "invert(85%)"
+}

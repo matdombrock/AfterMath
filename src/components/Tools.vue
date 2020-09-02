@@ -64,16 +64,16 @@ export default {
 <style scoped>
 .tool-item{
   padding:1em;
-  background:var(--accent2);
+  background:var(--accentD);
   width:85%;
   margin:0 auto;
   cursor: pointer;
 }
 .tool-item:nth-child(odd){
-  background:var(--accent3);
+  background:var(--accentE);
 }
 .tool-item:hover{
-  background:var(--accent);
+  background:var(--accentC);
 }
 .backWrap{
   text-align:left;
