@@ -17,16 +17,7 @@
       <Tools :s="s" />
       <Theme :s="s" :applyTheme="applyTheme" />
 
-      <div v-if="s.tab === 'info'">
-        <h1>AFTERMATH</h1>
-        <i>A stupidly over-engineered calculator app.</i>
-        <br>
-        GPL3
-        <br>
-        Made by <a href="https://matdombrock.com" target="_blank">Mathieu Dombrock</a>
-        <br>
-        Powered by <a href="https://mathjs.org/" target="_blank">MathJS</a>
-      </div>
+      <Info :s="s" />
 
       <Settings :s="s" />
 
@@ -47,6 +38,7 @@ import History from './components/History.vue';
 import Settings from './components/Settings.vue';
 import Tools from './components/Tools.vue';
 import Theme from './components/Theme.vue';
+import Info from './components/Info.vue';
 //import Tab from './components/Tab.vue';
 import {evaluate, simplify, parse} from 'mathjs';
 // Theme
@@ -63,6 +55,7 @@ export default {
     History,
     Tools,
     Theme,
+    Info,
     //Tab,
     Settings
   },
