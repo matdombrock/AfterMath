@@ -24,6 +24,16 @@ While this app is still in relatively early development, it's entirely useable i
 
 ---
 
+## Installation
+
+### Windows 
+
+Just grab an installer from the [Releases Page](https://github.com/matdombrock/AfterMath/releases).
+
+### macOS and Linux
+
+I'm currently only building for windows, but you shouldn't have any issues building this for your OS!
+
 # Usage
 
 ## Basic Usage
