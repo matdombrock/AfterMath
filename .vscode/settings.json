@@ -9,6 +9,7 @@
     "devtools",
     "keydown",
     "mathjs",
+    "nans",
     "nklayman",
     "postuninstall",
     "readonly",
