@@ -1,11 +1,3 @@
----
----
-## WARNING: NERDS ONLY BEYOND THIS POINT!!!
-
----
----
-
-
 # Development
 
 ### Windows 
