@@ -2,6 +2,7 @@
   --bg: rgb(45, 45, 45);
   --text: rgb(225, 225, 225);
   --textHighlight: rgb(233, 233, 233);
+  --textMuted: rgb(185, 185, 185);
   --accentA: rgb(20, 20, 20);
   --accentB: rgb(32, 32, 32);
   --accentC: rgb(55, 55, 55);
@@ -55,6 +56,25 @@ select{
 }
 hr{
   border-color: var(--accentE);
+}
+.btn-wrap{
+  text-align:center;
+  margin:1rem;
+}
+.btn{
+  background:var(--accentD);
+  color:var(--text);
+  outline:none;
+  border:none;
+  border-radius:0.2rem;
+  padding:0.5rem;
+  transition: all 0.2s;
+}
+.btn:hover{
+  background:var(--accentC);
+}
+.btn:active{
+  background:var(--accentB);
 }
 .app-area{
   background:var(--bg);
