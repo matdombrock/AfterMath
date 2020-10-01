@@ -75,7 +75,7 @@ export default {
       s:{
         tabs:{
           '1':{
-            input: '',
+            input: 'sqrt(pi)',
             history: [],
           },
           '2':{
