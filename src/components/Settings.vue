@@ -17,7 +17,7 @@
         
       </span>
       <div class="btn-wrap">
-        <button class="btn center" @click="resetSettings()">Reset</button>
+        <button class="btn center" @click="resetSettings()">Reset Settings</button>
       </div>
     </div>
     
