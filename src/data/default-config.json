@@ -75,12 +75,6 @@
     "description": "Simplify equations if a result can't be found.",
     "name": "Enable Simplification (Experimental))"
   },
-  "enable_profanity":{
-    "value": true,
-    "description": "Can we say bad words when we're mad?",
-    "name": "Enable Profanity",
-    "disabled":true
-  },
   "load_example_equations":{
     "value": true,
     "description": "Load example equations on startup",
