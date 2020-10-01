@@ -39,6 +39,7 @@
 <script>
 const { ipcRenderer } = window.require('electron');
 import configManager from './tools/configManager';
+import nanManager from './tools/nanManager';
 
 import TopTabs from './components/TopTabs.vue';
 import Numpad from './components/Numpad';// adding .vue causes error?
@@ -74,15 +75,15 @@ export default {
       s:{
         tabs:{
           '1':{
-            input: 'sin(45 deg) ^ sqrt(2 + 5!) + pi',
+            input: '',
             history: [],
           },
           '2':{
-            input: '(pi * 10)! / pi',
+            input: '',
             history: [],
           },
           '3':{
-            input: 'x^2 + x + 4(x) - y',
+            input: '',
             history: [],
           },
         },
@@ -117,7 +118,7 @@ export default {
           console.log(joined);
         }
       }
-      return 'FUCK';
+      return nanManager();
       //return NaN;
     },
     isElectron: function(){
