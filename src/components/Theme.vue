@@ -1,6 +1,6 @@
 <template>
   <div v-if="s.tab === 'theme'" class="theme">
-    <h1>Themes</h1>
+    <h1>Theme</h1>
     <select v-model="s.theme" @change="applyTheme()">
       <option value="light">MY EYES!</option>
       <option value="dark">Dark</option>
