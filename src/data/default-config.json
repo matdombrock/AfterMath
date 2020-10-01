@@ -66,7 +66,7 @@
     "disabled":true
   },
   "enable_string_output":{
-    "value": true,
+    "value": false,
     "description": "Enable advanced string output. Unit conversions ect.",
     "name": "Enable String Output (Experimental)"
   },
