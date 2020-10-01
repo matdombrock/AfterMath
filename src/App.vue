@@ -19,7 +19,7 @@
 
       <div v-if="s.tab === 'info'">
         <h1>AFTERMATH</h1>
-        <i>A Stupidly over-engineered calculator app.</i>
+        <i>A stupidly over-engineered calculator app.</i>
         <br>
         GPL3
         <br>
