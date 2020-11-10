@@ -85,7 +85,7 @@ export default {
         theme:'dark',
         tools:{
 
-        }
+        },
       }
     }
   },
@@ -146,11 +146,6 @@ export default {
       //console.log('mouse');
       //document.getElementById("input").focus();
     });
-    if(this.isElectron){
-      // move this to tools
-      const { ipcRenderer } = window.require('electron');
-      console.log(ipcRenderer.sendSync('get-tools'));
-    }
   },
   methods:{
     applyTheme(){
