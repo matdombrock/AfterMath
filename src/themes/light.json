@@ -1,16 +1,20 @@
 {
-  "--bg": "rgba(195,195,195,1)",
+  "--bg": "rgba(255,255,255,1)",
   "--text": "rgb(0, 0, 0)",
   "--textHighlight": "rgb(50, 50, 50)",
-  "--accentE": "rgb(120, 120, 120)",
-  "--accentD": "rgb(132, 132, 132)",
-  "--accentC": "rgb(155, 155, 155)",
-  "--accentB": "rgb(175, 175, 175)",
-  "--accentA": "rgb(185, 185, 185)",
+  "--textMuted": "rgb(100, 100, 100)",
+  "--textBtn": "rgb(255, 255, 255)",
+  "--accentE": "rgb(160, 160, 160)",
+  "--accentD": "rgb(180, 180, 180)",
+  "--accentC": "rgb(200, 200, 200)",
+  "--accentB": "rgb(220, 220, 220)",
+  "--accentA": "rgb(240, 240, 240)",
 
   "--mono-font": "LiberationMono",
   "--regular-font": "fallingSky",
   "--base-font-size": "14px",
 
-  "--icon-filter": "invert(0%)"
+  "--icon-filter": "invert(0%)",
+
+  "--aftermath": "rgb(255, 123, 0)"
 }

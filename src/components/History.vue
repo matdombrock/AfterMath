@@ -72,13 +72,14 @@ export default {
   background:var(--accentE);
   width:90%;
   margin:0 auto;
-  font-family: var(--mono-font)
+  font-family: var(--mono-font);
+  color:var(--textBtn);
 }
 .history-item:nth-child(odd){
   background:var(--accentD);
 }
 .history-item:hover{
-  background:var(--accent1);
+  background:var(--aftermath);
 }
 .history-item .icon{
   padding-left:0.1rem;
