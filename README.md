@@ -2,7 +2,7 @@
 
 AfterMath is an over-engineered calculator written in JavaScript.
 
-*If you're wondering why anyone would want a 100mb+ calculator app running on Electron, then this project is not for you.*
+*If you're wondering why anyone would want a 100mb+ calculator app running on Electron, then this project is probably not for you.* ¯\\_(ツ)_/¯
 
 While this app is still in relatively early development, it's entirely useable in it's current state.
 
@@ -76,7 +76,7 @@ If the 'Show Advanced History' setting is disabled, the only thing you can do is
 ## [Simplification](/Docs/simplification.md)
 ## [Unit Conversion](/Docs/unit-conversion.md)
 ## [Development Documentation](/Docs/development.md)
-
+## [IFAQS](/Docs/faq.md)
 
 
 
