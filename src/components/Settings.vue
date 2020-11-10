@@ -1,6 +1,6 @@
 <template>
   <div v-if="s.tab === 'settings'" class="settings">
-      <h1>Settings <img class="settings-icon" src="/icons/settings.svg"></h1> 
+      <h1>Settings</h1> 
       <span v-for="(value,key) in defaultConfig" :key="key">
 
         <div v-if="deactivated(value)" class="item">
@@ -109,10 +109,5 @@ h2{
 }
 .warning{
   color:var(--aftermath);
-}
-.settings-icon{
-  width:2rem;
-  filter: var(--icon-filter);
-  vertical-align: middle;
 }
 </style>
