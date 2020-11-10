@@ -1,6 +1,7 @@
 {
+  
   "what-percent":{
-    "name": "What Percent",
+    "name": "X is what percent of Y",
     "description": "{{part}} is what percent of {{whole}}?",
     "output": "{{output}}%",
     "variables": {
@@ -15,8 +16,9 @@
     },
     "formula": "(part / whole) * 100"
   },
+
   "percent-of":{
-    "name": "Percent Of",
+    "name": "X percent of Y",
     "description": "What is {{part}}% of {{whole}}?",
     "output": "{{output}}",
     "variables": {
@@ -31,6 +33,7 @@
     },
     "formula": "(part / 100) * whole"
   },
+
   "percents-change":{
     "name": "Percent Change",
     "description": "What is the change percentage between {{new}} and {{original}}?",
@@ -47,6 +50,7 @@
     },
     "formula": "( ( new - original ) / abs(original) ) * 100"
   },
+
   "pythagorean-theorem-c":{
     "name": "Pythagorean Theorem C",
     "description": "What is the hypotenuse length of a right triangle with known side lengths {{a}} & {{b}}?",
