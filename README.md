@@ -6,7 +6,7 @@ AfterMath is an over-engineered calculator written in JavaScript.
 
 While this app is still in relatively early development, it's entirely useable in it's current state.
 
-# [-DOWNLOAD WINDOWS INSTALLER-](https://github.com/matdombrock/AfterMath/releases/download/0.2.2/aftermath.Setup.0.2.2.exe)
+# [-DOWNLOAD WINDOWS INSTALLER-](https://github.com/matdombrock/AfterMath/releases/download/0.2.3/aftermath.Setup.0.2.3.exe)
 
 ![](/Docs/screenshots/screenshot.png)
 
