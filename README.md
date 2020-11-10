@@ -8,7 +8,7 @@ While this app is still in relatively early development, it's entirely useable i
 
 # [-DOWNLOAD WINDOWS INSTALLER-](https://github.com/matdombrock/AfterMath/releases/download/0.2.0/aftermath.Setup.0.2.0.exe)
 
-![](screenshot.png)
+![](/Docs/screenshots/screenshot.png)
 
 ---
 
@@ -30,6 +30,8 @@ While this app is still in relatively early development, it's entirely useable i
 ### Windows 
 
 Just grab an installer from the [Releases Page](https://github.com/matdombrock/AfterMath/releases).
+
+If you run into installation issues checkout the [Windows install help doc](/Docs/windows-install-help.md).
 
 ### macOS and Linux
 
