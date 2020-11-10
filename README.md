@@ -76,7 +76,7 @@ Tools have a basic structure and syntax that is hopefully easy to follow.
 
 Here are a few example tools to get you started:
 
-```json
+```js
 {
   // A basic tool example
   // Adds two values together
