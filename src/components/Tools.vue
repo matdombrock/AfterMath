@@ -1,6 +1,5 @@
 <template>
   <div class="tools" v-if="s.tab === 'tools'">
-    {{updateUserTools()}}
     <h1 v-if="tool===''">Tools</h1>
     <div v-if="tool===''">
       <div v-for="(tool,id) in toolsList" :key="tool.name" @click="setTool(id)" class="tool-item">
