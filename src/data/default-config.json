@@ -28,17 +28,17 @@
   },
   "show_tools_tab":{
     "value": true,
-    "description": "Show the tools tab",
+    "description": "Show a tab with preloaded and user created tools",
     "name": "Show Tools Tab"
   },
   "show_theme_tab":{
     "value": true,
-    "description": "Show Theme tab",
+    "description": "Show a tab that allows you to change the app theme",
     "name": "Show Theme Tab"
   },
   "show_info_tab":{
     "value": true,
-    "description": "Show Info tab",
+    "description": "Show a tan with information about this app",
     "name": "Show Info Tab"
   },
   "show_tool_equations":{
