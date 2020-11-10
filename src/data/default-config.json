@@ -85,5 +85,10 @@
     "value": true,
     "description": "Show full equations with tool results",
     "name": "Show Tool Equations"
+  },
+  "enable_user_tools":{
+    "value": false,
+    "description": "Enable loading custom user tools from ~/.aftermath/tools.json",
+    "name": "Enable Custom User Tools (Experimental)"
   }
 }
