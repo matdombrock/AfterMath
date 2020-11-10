@@ -1,6 +1,7 @@
 <template>
   <div v-if="s.tab === 'info'">
-    <h1>AFTERMATH</h1>
+    <h1>AFTERMATH v{{pkg.version}}</h1>
+    
     <img src="logo-trans.png" class="logo">
     <i>A stupidly over-engineered calculator app.</i>
     <br>
@@ -27,6 +28,7 @@
 
 <script>
 import configManager from '../tools/configManager';
+import pkg from '../../package.json';
 export default {
   name: 'Theme',
   props: {
@@ -35,7 +37,8 @@ export default {
   },
   data:()=>{
     return{
-      configManager: configManager
+      configManager: configManager,
+      pkg:pkg
     }
   },
   methods:{
