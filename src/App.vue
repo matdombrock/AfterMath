@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    
-
-    <div class="app-area">
+    <div class="app-area" v-if="loaded">
       <br>
       <div v-if="!Number.isNaN(Number(s.tab))">
         <input v-model="s.tabs[s.tab].input" id="input" type="text" placeholder="12345678" title="Input Equation">
@@ -24,6 +22,9 @@
       <div style="margin-top:28px"></div>
       <TopTabs :s="s"/>
     </div><!--app area-->
+    <div class="app-area" v-else>
+      LOADING...
+    </div>
   </div>
 </template>
 
@@ -61,6 +62,7 @@ export default {
   },
   data:()=>{
     return{
+      loaded: false,
       themes:{
         dark: themeDark,
         light: themeLight
@@ -146,6 +148,7 @@ export default {
       //console.log('mouse');
       //document.getElementById("input").focus();
     });
+    this.loaded = true;
   },
   methods:{
     applyTheme(){
