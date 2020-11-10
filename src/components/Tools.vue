@@ -1,12 +1,11 @@
 <template>
   <div class="tools" v-if="s.tab === 'tools'">
+    {{updateUserTools()}}
     <h1 v-if="tool===''">Tools</h1>
     <div v-if="tool===''">
       <div v-for="(tool,id) in toolsList" :key="tool.name" @click="setTool(id)" class="tool-item">
         {{tool.name}}
       </div>
-      <!-- <div class="tool-item" @click="setTool('what-percent')">'A' is what percent of 'B'</div>
-      <div class="tool-item" @click="setTool('percent-of')">What is 'A' percent of 'B'</div> -->
       <div class="tool-item" @click="setCustomTool('list')">List (array) Tools</div>
       <br>
       <div class="btn-wrap" v-if="s.config.enable_user_tools">
@@ -98,12 +97,13 @@ export default {
   width:85%;
   margin:0 auto;
   cursor: pointer;
+  color: var(--textBtn);
 }
 .tool-item:nth-child(odd){
   background:var(--accentE);
 }
 .tool-item:hover{
-  background:var(--accentC);
+  background:var(--aftermath);
 }
 .backWrap{
   text-align:left;
