@@ -1,18 +1,48 @@
 <template>
   <div v-if="s.tab === 'settings'" class="settings">
-      <h1>Settings</h1> 
+      <h1>Settings <img class="settings-icon" src="/icons/settings.svg"></h1> 
       <span v-for="(value,key) in defaultConfig" :key="key">
+
         <div v-if="deactivated(value)" class="item">
-          <input value="false" type="checkbox" disabled> {{value.name}}
-          <div class="description">{{value.description}}</div>
+          <!-- <input value="false" type="checkbox" disabled> {{value.name}}
+          <div class="description">{{value.description}}</div> -->
+          <label class="switch">
+            <input v-model="s.config[key]" type="checkbox" disabled> 
+            <span class="slider round"></span>
+          </label>
+          <div style="display:inline">
+            <h2>{{value.name}}</h2>
+            <div class="description">
+              {{value.description}}
+              <div class="warning">This is deactivated by another setting!</div>
+            </div>
+          </div>
         </div>
+
         <div v-if="disabled(value)" class="item">
-          <input v-model="s.config[key]" type="checkbox" disabled> {{value.name}}
-          <div class="description">{{value.description}}</div>
+          <!-- <input v-model="s.config[key]" type="checkbox" disabled> {{value.name}}
+          <div class="description">{{value.description}}</div> -->
+          <label class="switch">
+            <input v-model="s.config[key]" type="checkbox" disabled> 
+            <span class="slider round"></span>
+          </label>
+          <div style="display:inline">
+            <h2>{{value.name}}</h2>
+            <div class="description">{{value.description}}</div>
+            <div class="warning">This feature is not ready!</div>
+          </div>
         </div>
+
         <div v-if="!deactivated(value) && !disabled(value)" class="item">
-          <input v-model="s.config[key]" type="checkbox"> {{value.name}}
-          <div class="description">{{value.description}}</div>
+          <!-- <input v-model="s.config[key]" type="checkbox"> {{value.name}} -->
+          <label class="switch">
+            <input v-model="s.config[key]" type="checkbox"> 
+            <span class="slider round"></span>
+          </label>
+          <div style="display:inline">
+            <h2>{{value.name}}</h2>
+            <div class="description">{{value.description}}</div>
+          </div>
         </div>
         
       </span>
@@ -59,8 +89,12 @@ export default {
 h1{
   text-align:center;
 }
+h2{
+  padding-left:1rem;
+  display:inline;
+}
 .settings{
-  max-width:300px;
+  max-width:400px;
   text-align:left;
   margin:0 auto;
   padding:1em;
@@ -72,5 +106,13 @@ h1{
 }
 .description{
   color:var(--textMuted);
+}
+.warning{
+  color:var(--aftermath);
+}
+.settings-icon{
+  width:2rem;
+  filter: var(--icon-filter);
+  vertical-align: middle;
 }
 </style>

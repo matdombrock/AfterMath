@@ -31,12 +31,6 @@
     "description": "Show the tools tab",
     "name": "Show Tools Tab"
   },
-  "show_settings_tab":{
-    "value": true,
-    "description": "Show Settings tab",
-    "name": "Show Settings Tab",
-    "disabled":true
-  },
   "show_theme_tab":{
     "value": true,
     "description": "Show Theme tab",
@@ -46,6 +40,38 @@
     "value": true,
     "description": "Show Info tab",
     "name": "Show Info Tab"
+  },
+  "show_tool_equations":{
+    "value": true,
+    "description": "Show full equations with tool results",
+    "name": "Show Tool Equations"
+  },
+  "enable_string_output":{
+    "value": false,
+    "description": "[EXPERIMENTAL] Enable advanced string output. Unit conversions ect.",
+    "name": "Enable String Output"
+  },
+  "enable_simplification":{
+    "value": true,
+    "description": "[EXPERIMENTAL]  Simplify equations if a result can't be found.",
+    "name": "Enable Simplification"
+  },
+  "enable_user_tools":{
+    "value": false,
+    "description": "[EXPERIMENTAL] Enable loading custom user tools from ~/.aftermath/tools.json",
+    "name": "Enable Custom User Tools"
+  },
+  "load_example_equations":{
+    "value": true,
+    "description": "Load example equations on startup",
+    "name": "Load Example Equations",
+    "disabled":true
+  },
+  "persist_data":{
+    "value": true,
+    "description": "Save settings and history between sessions.",
+    "name": "Persists Data",
+    "disabled":true
   },
   "auto_calculate":{
     "value": true,
@@ -59,36 +85,10 @@
     "name": "Update Equation",
     "disabled":true
   },
-  "persist_data":{
+  "show_settings_tab":{
     "value": true,
-    "description": "Save settings and history between sessions.",
-    "name": "Persists Data",
+    "description": "Show Settings tab",
+    "name": "Show Settings Tab",
     "disabled":true
-  },
-  "enable_string_output":{
-    "value": false,
-    "description": "Enable advanced string output. Unit conversions ect.",
-    "name": "Enable String Output (Experimental)"
-  },
-  "enable_simplification":{
-    "value": true,
-    "description": "Simplify equations if a result can't be found.",
-    "name": "Enable Simplification (Experimental))"
-  },
-  "load_example_equations":{
-    "value": true,
-    "description": "Load example equations on startup",
-    "name": "Load Example Equations",
-    "disabled":true
-  },
-  "show_tool_equations":{
-    "value": true,
-    "description": "Show full equations with tool results",
-    "name": "Show Tool Equations"
-  },
-  "enable_user_tools":{
-    "value": false,
-    "description": "Enable loading custom user tools from ~/.aftermath/tools.json",
-    "name": "Enable Custom User Tools (Experimental)"
   }
 }
